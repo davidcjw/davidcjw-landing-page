@@ -247,7 +247,7 @@ export default function HalideTopoHero() {
       <GrainCanvas />
 
       {/* ── Page content ── */}
-      <div className="relative z-10 w-full h-screen flex flex-col px-8 sm:px-14 py-8">
+      <div className="relative z-10 w-full h-screen flex flex-col px-8 sm:px-14 pt-8 pb-16">
 
         {/* Top bar */}
         <div className="flex justify-between items-start">
@@ -350,51 +350,23 @@ export default function HalideTopoHero() {
           </div>
         </div>
 
-        {/* Bottom bar — stacked on mobile, side-by-side on desktop */}
+        {/* Bottom bar */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 1.1 }}
-          className="pb-2"
+          className="flex justify-between items-end"
         >
-          {/* Mobile */}
-          <div className="flex flex-col gap-3 md:hidden">
-            <motion.a
-              href="#experience"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 1.3 }}
-              className="w-full text-center px-6 py-3 bg-white text-gray-900 text-xs font-bold tracking-[0.2em] uppercase hover:bg-indigo-100 transition-colors"
-            >
-              Explore Depth
-            </motion.a>
-            <p className="text-white/30 text-xs font-mono tracking-wider uppercase text-center">
-              [ Portfolio 2026 ] · Cloud · AI · Full Stack
-            </p>
+          <div>
+            <p className="text-white/40 text-xs font-mono tracking-widest uppercase">[ Portfolio 2026 ]</p>
+            <p className="text-white/30 text-xs font-mono tracking-wider uppercase mt-0.5">Cloud · AI · Full Stack</p>
           </div>
-
-          {/* Desktop */}
-          <div className="hidden md:flex justify-between items-end">
-            <div>
-              <p className="text-white/40 text-xs font-mono tracking-widest uppercase">[ Portfolio 2026 ]</p>
-              <p className="text-white/30 text-xs font-mono tracking-wider uppercase mt-0.5">Cloud · AI · Full Stack</p>
-            </div>
-            <motion.div
-              initial={{ scaleX: 0 }}
-              animate={{ scaleX: 1 }}
-              transition={{ duration: 1.2, delay: 1.2 }}
-              className="flex-1 mx-8 h-px bg-white/10 origin-left"
-            />
-            <motion.a
-              href="#experience"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 1.3 }}
-              className="px-6 py-3 bg-white text-gray-900 text-xs font-bold tracking-[0.2em] uppercase hover:bg-indigo-100 transition-colors shrink-0"
-            >
-              Explore Depth
-            </motion.a>
-          </div>
+          <motion.div
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ duration: 1.2, delay: 1.2 }}
+            className="hidden md:block flex-1 mx-8 h-px bg-white/10 origin-left"
+          />
         </motion.div>
       </div>
 

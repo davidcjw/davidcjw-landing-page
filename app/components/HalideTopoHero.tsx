@@ -288,18 +288,20 @@ export default function HalideTopoHero() {
             </motion.h1>
           </div>
 
-          {/* 3D floating image panel — center-right, in front of text */}
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.0, delay: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          {/* 3D floating image panel — plain div for positioning so FM can't clobber translateY(-50%) */}
+          <div
             className="absolute right-0 z-10"
             style={{
               top: "50%",
               transform: "translateY(-50%)",
-              width: "clamp(340px, 55vw, 700px)",
+              width: "clamp(320px, 52vw, 660px)",
             }}
           >
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.0, delay: 0.7, ease: [0.16, 1, 0.3, 1] }}
+            >
             {/* Perspective wrapper */}
             <div style={{ perspective: "900px" }}>
               <motion.div
@@ -341,7 +343,8 @@ export default function HalideTopoHero() {
                 </div>
               </motion.div>
             </div>
-          </motion.div>
+            </motion.div>
+          </div>
         </div>
 
         {/* Bottom bar */}

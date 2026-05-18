@@ -81,14 +81,14 @@ export const projects = [
     name: "One Click PDF",
     description: "Share any PDF via a URL with a simple click",
     tech: ["Next.js", "TypeScript"],
-    url: null,
-    github: "https://pdflink.app",
+    url: "https://pdflink.app",
+    github: null,
   },
   {
     name: "Number Rush",
     description: "A fast-paced number game challenging your mental arithmetic speed.",
     tech: [],
-    url: null,
-    github: "https://game-ecru-mu-74.vercel.app/",
+    url: "https://game-ecru-mu-74.vercel.app/",
+    github: null,
   },
 ];

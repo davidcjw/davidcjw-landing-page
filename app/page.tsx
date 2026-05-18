@@ -1,5 +1,5 @@
 import Navbar from "./components/Navbar";
-import HeroSection from "./components/HeroSection";
+import HalideTopoHero from "./components/HalideTopoHero";
 import ExperienceSection from "./components/ExperienceSection";
 import PortfolioSection from "./components/PortfolioSection";
 import Footer from "./components/Footer";
@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <main className="bg-gray-900">
       <Navbar />
-      <HeroSection />
+      <HalideTopoHero />
       <ExperienceSection />
       <PortfolioSection />
       <Footer />

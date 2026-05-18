@@ -270,8 +270,37 @@ export default function HalideTopoHero() {
           </motion.div>
         </div>
 
-        {/* Main area — text + 3D panel */}
-        <div className="flex-1 flex items-center relative">
+        {/* ── MOBILE layout: stacked ── */}
+        <div className="md:hidden flex-1 flex flex-col justify-center items-center gap-6 px-2">
+          {/* Image */}
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+            className="w-full max-w-sm relative rounded-sm overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.7)]"
+          >
+            <div className="aspect-[16/10]"><LandscapeImage /></div>
+            <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.55) 100%)" }} />
+            <div className="absolute bottom-0 inset-x-0 px-3 py-2 flex justify-between bg-gradient-to-t from-black/70 to-transparent">
+              <p className="text-white/40 text-[10px] font-mono tracking-widest uppercase">[ Software Engineer ]</p>
+              <p className="text-indigo-400/60 text-[10px] font-mono">SG · 2026</p>
+            </div>
+          </motion.div>
+
+          {/* Name */}
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, delay: 0.7, ease: [0.16, 1, 0.3, 1] }}
+            className="text-white font-bold tracking-tight text-center select-none leading-none"
+            style={{ fontSize: "clamp(3.8rem, 20vw, 6rem)", lineHeight: 0.92, fontFamily: "var(--font-figtree)" }}
+          >
+            DAVID<br />CHONG
+          </motion.h1>
+        </div>
+
+        {/* ── DESKTOP layout: overlapping absolute ── */}
+        <div className="hidden md:flex flex-1 items-center relative">
 
           {/* Large display name — left, behind panel */}
           <div className="absolute bottom-24 left-0 z-0 select-none leading-none">
@@ -288,7 +317,7 @@ export default function HalideTopoHero() {
             </motion.h1>
           </div>
 
-          {/* 3D floating image panel — plain div for positioning so FM can't clobber translateY(-50%) */}
+          {/* 3D floating image panel */}
           <div
             className="absolute right-0 z-10"
             style={{
@@ -302,47 +331,21 @@ export default function HalideTopoHero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.0, delay: 0.7, ease: [0.16, 1, 0.3, 1] }}
             >
-            {/* Perspective wrapper */}
-            <div style={{ perspective: "900px" }}>
-              <motion.div
-                style={{
-                  rotateX: panelRotateX,
-                  rotateY: panelRotateY,
-                  x: panelX,
-                  y: panelY,
-                  transformStyle: "preserve-3d",
-                }}
-                className="relative rounded-sm overflow-hidden shadow-[0_40px_120px_rgba(0,0,0,0.8)]"
-              >
-                {/* Image */}
-                <div className="aspect-[16/10]">
-                  <LandscapeImage />
-                </div>
-
-                {/* Top-edge highlight (simulates 3D surface lighting) */}
-                <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-indigo-400/30 to-transparent" />
-                {/* Left-edge highlight */}
-                <div className="absolute inset-y-0 left-0 w-px bg-gradient-to-b from-indigo-400/20 to-transparent" />
-
-                {/* Film-grain-style dark vignette over the image */}
-                <div
-                  className="absolute inset-0 pointer-events-none"
-                  style={{
-                    background: "radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.6) 100%)",
-                  }}
-                />
-
-                {/* Bottom caption bar */}
-                <div className="absolute bottom-0 inset-x-0 px-4 py-3 flex justify-between items-end bg-gradient-to-t from-black/70 to-transparent">
-                  <p className="text-white/40 text-[10px] font-mono tracking-widest uppercase">
-                    [ Software Engineer ]
-                  </p>
-                  <p className="text-indigo-400/60 text-[10px] font-mono tracking-wider">
-                    SG · 2026
-                  </p>
-                </div>
-              </motion.div>
-            </div>
+              <div style={{ perspective: "900px" }}>
+                <motion.div
+                  style={{ rotateX: panelRotateX, rotateY: panelRotateY, x: panelX, y: panelY, transformStyle: "preserve-3d" }}
+                  className="relative rounded-sm overflow-hidden shadow-[0_40px_120px_rgba(0,0,0,0.8)]"
+                >
+                  <div className="aspect-[16/10]"><LandscapeImage /></div>
+                  <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-indigo-400/30 to-transparent" />
+                  <div className="absolute inset-y-0 left-0 w-px bg-gradient-to-b from-indigo-400/20 to-transparent" />
+                  <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.6) 100%)" }} />
+                  <div className="absolute bottom-0 inset-x-0 px-4 py-3 flex justify-between items-end bg-gradient-to-t from-black/70 to-transparent">
+                    <p className="text-white/40 text-[10px] font-mono tracking-widest uppercase">[ Software Engineer ]</p>
+                    <p className="text-indigo-400/60 text-[10px] font-mono tracking-wider">SG · 2026</p>
+                  </div>
+                </motion.div>
+              </div>
             </motion.div>
           </div>
         </div>
@@ -355,7 +358,7 @@ export default function HalideTopoHero() {
             transition={{ duration: 0.8, delay: 1.1 }}
           >
             <p className="text-white/40 text-xs font-mono tracking-widest uppercase">[ Portfolio 2026 ]</p>
-            <p className="text-white/30 text-xs font-mono tracking-wider uppercase mt-0.5">
+            <p className="text-white/30 text-xs font-mono tracking-wider uppercase mt-0.5 whitespace-nowrap">
               Cloud · AI · Full Stack
             </p>
           </motion.div>

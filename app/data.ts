@@ -87,8 +87,15 @@ export const projects = [
   {
     name: "Number Rush",
     description: "A fast-paced number game challenging your mental arithmetic speed.",
-    tech: [],
-    url: "https://game-ecru-mu-74.vercel.app/",
+    tech: ["Vanilla js"],
+    url: "https://numberrush.davidcjw.com",
+    github: null,
+  },
+  {
+    name: "Paw Patrol Educational Game",
+    description: "Your toddler's favourite pup as an educational game.",
+    tech: ["Next.js", "Typescript", "Vite"],
+    url: "https://pawpatrol.davidcjw.com",
     github: null,
   },
 ];

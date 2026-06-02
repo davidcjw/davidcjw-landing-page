@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# davidcjw.com — Personal Landing Page
 
-## Getting Started
+Portfolio site for David Chong, a software engineer based in Singapore. Deployed at [davidcjw.com](https://davidcjw.com).
 
-First, run the development server:
+## Stack
+
+- **Next.js 16** (App Router) + **React 19**
+- **Tailwind CSS v4** (config-less, via PostCSS)
+- **Framer Motion v12** — animations and spring physics
+- **Figtree** — Google Font
+- TypeScript, deployed on Vercel
+
+## Development
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev       # http://localhost:3000
+npm run build     # production build
+npm run lint      # eslint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Content
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+All content lives in [`app/data.ts`](app/data.ts) — edit the `experiences` and `projects` arrays to update the page.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Structure
 
-## Learn More
+```
+app/
+  layout.tsx          root layout (font, metadata)
+  page.tsx            home page (composes all sections)
+  icon.tsx            favicon (32×32 PNG, generated)
+  globals.css         global styles
+  components/
+    Navbar.tsx
+    HalideTopoHero.tsx
+    ExperienceSection.tsx
+    ExperienceCard.tsx
+    PortfolioSection.tsx
+    PortfolioCard.tsx
+    Footer.tsx
+  data.ts             experiences + projects content
+blocks/               reusable animation primitives
+```
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+See [`CODEBASE.md`](CODEBASE.md) for a full map of the repo.

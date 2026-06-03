@@ -19,18 +19,16 @@ export default function PortfolioCard({
   github,
   index,
 }: PortfolioCardProps) {
-  const link = url ?? github ?? "#";
+  const primaryLink = url ?? github ?? "#";
 
   return (
-    <motion.a
-      href={link}
-      target="_blank"
-      rel="noopener noreferrer"
+    <motion.div
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.45, delay: index * 0.07 }}
       whileHover={{ scale: 1.025 }}
+      onClick={() => window.open(primaryLink, "_blank", "noopener,noreferrer")}
       className="group relative flex flex-col bg-gray-800/50 border border-white/8 rounded-2xl p-6 hover:border-indigo-500/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.12)] transition-all duration-300 cursor-pointer"
     >
       {/* Top glow on hover */}
@@ -42,14 +40,26 @@ export default function PortfolioCard({
         </h3>
         <div className="flex gap-2 ml-2 shrink-0">
           {url && (
-            <span className="text-gray-500 group-hover:text-indigo-400 transition-colors">
+            <a
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="text-gray-500 hover:text-indigo-400 transition-colors"
+            >
               <ExternalIcon />
-            </span>
+            </a>
           )}
-          {github && !url && (
-            <span className="text-gray-500 group-hover:text-indigo-400 transition-colors">
+          {github && (
+            <a
+              href={github}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              className="text-gray-500 hover:text-indigo-400 transition-colors"
+            >
               <GithubIcon />
-            </span>
+            </a>
           )}
         </div>
       </div>
@@ -68,7 +78,7 @@ export default function PortfolioCard({
           ))}
         </div>
       )}
-    </motion.a>
+    </motion.div>
   );
 }
 

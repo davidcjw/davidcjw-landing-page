@@ -64,6 +64,14 @@ export const experiences = [
 
 export const projects = [
   {
+    name: "P1 Registration Planner",
+    description: "A Google-maps inspired free tool for Singapore parents navigating Primary 1 school registration.",
+    tech: ["Next.js", "TypeScript", "React Leaflet", "Framer Motion", "Anthropic SDK"],
+    url: "https://p1-registration.davidcjw.com",
+    github: null,
+    category: "app",
+  },
+  {
     name: "IPPT Calculator",
     description: "Singapore IPPT scoring calculator — computes your 2.4 km run, sit-ups, and push-ups scores with real-time results.",
     tech: ["Next.js", "TypeScript"],

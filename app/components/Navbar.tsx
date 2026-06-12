@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const links = [
   { label: "Experience", href: "#experience", external: false },
   { label: "Portfolio", href: "#portfolio", external: false },
-  { label: "Blog", href: "https://smarthome.davidcjw.com", external: true },
+  { label: "Blog", href: "https://democratizing-claude.davidcjw.com", external: true },
   { label: "Contact", href: "#contact", external: false },
 ];
 

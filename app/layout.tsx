@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Figtree } from "next/font/google";
 import "./globals.css";
+import { KBDDragon } from "./components/KBDDragon";
 
 const figtree = Figtree({
   subsets: ["latin"],
@@ -19,7 +20,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${figtree.variable} h-full antialiased`}>
-      <body className="min-h-full bg-gray-900">{children}</body>
+      <body className="min-h-full bg-gray-900">
+        {children}
+        <KBDDragon />
+      </body>
     </html>
   );
 }

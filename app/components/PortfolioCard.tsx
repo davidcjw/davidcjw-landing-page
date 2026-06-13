@@ -19,7 +19,7 @@ export default function PortfolioCard({
   github,
   index,
 }: PortfolioCardProps) {
-  const primaryLink = url ?? github ?? "#";
+  const primaryLink = url ?? github;
 
   return (
     <motion.div
@@ -27,9 +27,17 @@ export default function PortfolioCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.45, delay: index * 0.07 }}
-      whileHover={{ scale: 1.025 }}
-      onClick={() => window.open(primaryLink, "_blank", "noopener,noreferrer")}
-      className="group relative flex flex-col bg-gray-800/50 border border-white/8 rounded-2xl p-6 hover:border-indigo-500/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.12)] transition-all duration-300 cursor-pointer"
+      whileHover={primaryLink ? { scale: 1.025 } : undefined}
+      onClick={
+        primaryLink
+          ? () => window.open(primaryLink, "_blank", "noopener,noreferrer")
+          : undefined
+      }
+      className={`group relative flex flex-col bg-gray-800/50 border border-white/8 rounded-2xl p-6 transition-all duration-300 ${
+        primaryLink
+          ? "hover:border-indigo-500/40 hover:shadow-[0_0_30px_rgba(99,102,241,0.12)] cursor-pointer"
+          : ""
+      }`}
     >
       {/* Top glow on hover */}
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-indigo-500/0 to-transparent group-hover:via-indigo-500/50 transition-all duration-500 rounded-t-2xl" />

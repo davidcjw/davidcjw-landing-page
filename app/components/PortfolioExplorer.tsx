@@ -16,8 +16,9 @@ type Filter = (typeof FILTERS)[number]["value"];
 export default function PortfolioExplorer() {
   const [active, setActive] = useState<Filter>("all");
 
+  const visible = projects.filter((p) => !p.hidden);
   const filtered =
-    active === "all" ? projects : projects.filter((p) => p.category === active);
+    active === "all" ? visible : visible.filter((p) => p.category === active);
 
   return (
     <section className="px-6 pb-24">
@@ -27,8 +28,8 @@ export default function PortfolioExplorer() {
           {FILTERS.map(({ label, value }) => {
             const count =
               value === "all"
-                ? projects.length
-                : projects.filter((p) => p.category === value).length;
+                ? visible.length
+                : visible.filter((p) => p.category === value).length;
             return (
               <button
                 key={value}

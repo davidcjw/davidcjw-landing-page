@@ -18,10 +18,11 @@ function Stat({ value, label }: { value: string | number; label: string }) {
 }
 
 export default function PortfolioPageHero() {
-  const total = projects.length;
-  const live = projects.filter((p) => p.url).length;
-  const openSource = projects.filter((p) => p.category === "open-source").length;
-  const technologies = new Set(projects.flatMap((p) => p.tech)).size;
+  const visible = projects.filter((p) => !p.hidden);
+  const total = visible.length;
+  const live = visible.filter((p) => p.url).length;
+  const openSource = visible.filter((p) => p.category === "open-source").length;
+  const technologies = new Set(visible.flatMap((p) => p.tech)).size;
 
   return (
     <header className="px-6 pt-28 pb-14">

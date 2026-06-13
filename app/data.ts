@@ -62,7 +62,22 @@ export const experiences = [
   },
 ];
 
-export const projects = [
+export type Project = {
+  name: string;
+  description: string;
+  tech: string[];
+  url: string | null;
+  github: string | null;
+  category: "app" | "open-source";
+  /**
+   * Set `hidden: true` to keep a project in this list but hide it from the
+   * site (both the home teaser and /portfolio). Your curation switch — flip
+   * weaker/experimental projects off without deleting them.
+   */
+  hidden?: boolean;
+};
+
+export const projects: Project[] = [
   {
     name: "P1 Registration Planner",
     description: "A Google-maps inspired free tool for Singapore parents navigating Primary 1 school registration.",
@@ -166,5 +181,155 @@ export const projects = [
     url: null,
     github: "https://github.com/davidcjw/sir-reminds-a-lot-v2",
     category: "open-source",
+  },
+
+  // ── Pulled in from the wider ~/code portfolio ──────────────────────────────
+  // Links inferred from your davidcjw.com domains and github.com/davidcjw/<repo>
+  // pattern — verify any that are private and flip `hidden` as you like.
+  {
+    name: "Job Hunt Command Center",
+    description: "A calm, Singapore-localised job-application tracker — Kanban board, a Today view, and stats.",
+    tech: ["Next.js", "TypeScript", "Supabase"],
+    url: "https://jobhunt.davidcjw.com",
+    github: null,
+    category: "app",
+  },
+  {
+    name: "Card Manager",
+    description: "A credit-card manager that recommends the optimal card for every spend category.",
+    tech: ["Next.js", "TypeScript"],
+    url: "https://cardmanager.davidcjw.com",
+    github: null,
+    category: "app",
+  },
+  {
+    name: "DevMind AI",
+    description: "An AI-native engineering advisor built on Claude Opus.",
+    tech: ["Next.js", "TypeScript", "Claude AI"],
+    url: "https://devmind-ai-lilac.vercel.app",
+    github: null,
+    category: "app",
+  },
+  {
+    name: "OSRS Hours to Max",
+    description: "Calculates how many hours stand between you and a maxed Old School RuneScape account.",
+    tech: ["Next.js", "TypeScript"],
+    url: "https://osrs-hours-to-max.vercel.app",
+    github: null,
+    category: "app",
+  },
+  {
+    name: "Democratizing Claude",
+    description: "A blog and course on getting the most out of Claude Code as an engineer.",
+    tech: ["Next.js", "TypeScript"],
+    url: "https://democratizing-claude.davidcjw.com",
+    github: null,
+    category: "app",
+  },
+  {
+    name: "AgentReady",
+    description: "Scores any GitHub repo for AI-agent readiness (0–10) with an embeddable SVG badge.",
+    tech: ["Next.js", "TypeScript"],
+    url: null,
+    github: "https://github.com/davidcjw/agentready",
+    category: "open-source",
+  },
+  {
+    name: "Claude's Brain",
+    description: "A local dashboard that visualises which files Claude Code reads — green if present, red if missing.",
+    tech: ["Next.js", "TypeScript"],
+    url: null,
+    github: "https://github.com/davidcjw/claude-brain",
+    category: "open-source",
+  },
+  {
+    name: "Telegram Claude Agent",
+    description: "A personal Claude Code agent on your phone, via Telegram and the Claude Agent SDK.",
+    tech: ["Python", "Claude Agent SDK"],
+    url: null,
+    github: "https://github.com/davidcjw/telegram-claude-agent",
+    category: "open-source",
+  },
+  {
+    name: "NoDoze",
+    description: "A minimalist macOS menu-bar app — one toggle keeps your laptop awake while agents run.",
+    tech: ["Swift", "macOS"],
+    url: null,
+    github: "https://github.com/davidcjw/nodoze",
+    category: "open-source",
+  },
+  {
+    name: "VCP Swing Trading",
+    description: "An MCP server for VCP (volatility-contraction pattern) swing-trading analysis.",
+    tech: ["Python", "MCP"],
+    url: null,
+    github: "https://github.com/davidcjw/swing-trading",
+    category: "open-source",
+  },
+
+  // ── Hidden by default — real projects without a confirmed public link, or
+  //    lighter experiments. Flip `hidden` (or add a url/github) to surface them.
+  {
+    name: "QuoteCompare SG",
+    description: "AI side-by-side comparison of interior-design renovation quotes.",
+    tech: ["Next.js", "TypeScript", "Claude AI"],
+    url: null,
+    github: null,
+    category: "app",
+    hidden: true,
+  },
+  {
+    name: "The Chronicle",
+    description: "An OSRS-inspired productivity dashboard — journals and quest logs for real-life goals.",
+    tech: ["Next.js", "Tailwind"],
+    url: null,
+    github: null,
+    category: "app",
+    hidden: true,
+  },
+  {
+    name: "Jiak Simi Ah",
+    description: "A Singapore food decider that settles the 'what to eat' debate in one tap.",
+    tech: ["Next.js", "Google Places"],
+    url: null,
+    github: null,
+    category: "app",
+    hidden: true,
+  },
+  {
+    name: "Reno Shopping List",
+    description: "A renovation shopping checklist — track what to buy and where.",
+    tech: ["Next.js", "Tailwind"],
+    url: null,
+    github: null,
+    category: "app",
+    hidden: true,
+  },
+  {
+    name: "再多一个 (Zai Duo Yi Ge)",
+    description: "A storefront for a Singapore homemade-tiramisu brand.",
+    tech: ["Next.js", "Tailwind"],
+    url: null,
+    github: null,
+    category: "app",
+    hidden: true,
+  },
+  {
+    name: "Ato Gelateria",
+    description: "A storefront for a Singapore artisanal-gelato brand.",
+    tech: ["Next.js", "Tailwind"],
+    url: null,
+    github: null,
+    category: "app",
+    hidden: true,
+  },
+  {
+    name: "PAW Patrol Character Explorer",
+    description: "A scrollytelling site exploring PAW Patrol characters — built for my son.",
+    tech: ["Vite", "TypeScript"],
+    url: null,
+    github: null,
+    category: "app",
+    hidden: true,
   },
 ];

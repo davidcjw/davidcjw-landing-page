@@ -17,7 +17,8 @@ type Filter = (typeof FILTERS)[number]["value"];
 export default function PortfolioSection() {
   const [active, setActive] = useState<Filter>("all");
 
-  const filtered = active === "all" ? projects : projects.filter((p) => p.category === active);
+  const visible = projects.filter((p) => !p.hidden);
+  const filtered = active === "all" ? visible : visible.filter((p) => p.category === active);
 
   return (
     <section id="portfolio" className="bg-gray-900 py-24 px-6">

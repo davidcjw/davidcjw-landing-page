@@ -78,10 +78,12 @@ export function KBDDragon() {
 
   // Set initial position on mount (bottom-right corner)
   useEffect(() => {
-    setPos({
-      x: window.innerWidth - CW * SCALE - 24,
-      y: window.innerHeight - CH * SCALE - 24,
-    })
+    const placeBottomRight = () =>
+      setPos({
+        x: window.innerWidth - CW * SCALE - 24,
+        y: window.innerHeight - CH * SCALE - 24,
+      })
+    placeBottomRight()
   }, [])
 
   // Window-level drag event listeners

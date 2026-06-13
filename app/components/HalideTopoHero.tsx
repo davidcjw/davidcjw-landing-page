@@ -171,9 +171,8 @@ export default function HalideTopoHero() {
   const cy = vh / 2;
 
   useEffect(() => {
-    setVw(window.innerWidth);
-    setVh(window.innerHeight);
     const onResize = () => { setVw(window.innerWidth); setVh(window.innerHeight); };
+    onResize(); // sync to the real viewport once mounted (client-only)
     window.addEventListener("resize", onResize);
     return () => window.removeEventListener("resize", onResize);
   }, []);

@@ -29,6 +29,8 @@ npm run lint      # eslint
 
 All content lives in [`app/data.ts`](app/data.ts) — edit the `experiences` and `projects` arrays to update the page. The `/portfolio` page and the home portfolio section both read from `projects`, so one edit updates both.
 
+**Curating which projects show:** every project supports an optional `hidden?: boolean`. Set `hidden: true` to keep a project in the list but hide it from the site (home + `/portfolio`) — your switch for weaker or unfinished projects, no deletion needed. Projects with no `url` or `github` render as non-clickable cards.
+
 ## Structure
 
 ```

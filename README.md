@@ -21,9 +21,18 @@ npm run lint      # eslint
 
 ## Routes
 
-- `/` — single-page home (hero, experience, portfolio teaser, contact)
+- `/` — single-page home (hero, experience, top-4 portfolio teaser, contact)
 - `/portfolio` — dedicated "building in public" portfolio page: stats, filterable
   project grid, and build principles. Sourced from the same `projects` array.
+
+## SEO & analytics
+
+- **Social-share images** — generated at build via `next/og`:
+  `app/opengraph-image.tsx` (home) and `app/portfolio/opengraph-image.tsx`.
+- **Metadata** — `app/layout.tsx` sets `metadataBase`, a title template, canonical
+  URLs, and OpenGraph/Twitter tags; each route adds its own `title`/canonical.
+- **`app/sitemap.ts`** + **`app/robots.ts`** — generated `/sitemap.xml` and `/robots.txt`.
+- **Analytics** — `@vercel/analytics` mounted in `app/layout.tsx` (`<Analytics />`).
 
 ## Content
 

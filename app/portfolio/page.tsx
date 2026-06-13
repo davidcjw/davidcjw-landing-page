@@ -5,9 +5,16 @@ import PortfolioExplorer from "../components/PortfolioExplorer";
 import BuildPrinciples from "../components/BuildPrinciples";
 
 export const metadata: Metadata = {
-  title: "Portfolio · David Chong",
+  title: "Portfolio",
   description:
     "Everything I'm building in public — web apps, open-source tools, and experiments.",
+  alternates: { canonical: "/portfolio" },
+  openGraph: {
+    title: "Portfolio · David Chong",
+    description:
+      "Everything I'm building in public — web apps, open-source tools, and experiments.",
+    url: "https://davidcjw.com/portfolio",
+  },
 };
 
 export default function PortfolioPage() {

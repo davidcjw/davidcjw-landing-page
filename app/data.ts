@@ -263,7 +263,7 @@ export const projects: Project[] = [
     description: "An MCP server for VCP (volatility-contraction pattern) swing-trading analysis.",
     tech: ["Python", "MCP"],
     url: null,
-    github: "https://github.com/davidcjw/swing-trading",
+    github: null, // private repo — no public link yet
     category: "open-source",
   },
 

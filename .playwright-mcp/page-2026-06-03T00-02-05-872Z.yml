@@ -1,0 +1,281 @@
+- generic [ref=e1]:
+  - main [ref=e2]:
+    - navigation [ref=e390]:
+      - link "David Chong" [ref=e391] [cursor=pointer]:
+        - /url: "#top"
+      - list [ref=e392]:
+        - listitem [ref=e393]:
+          - link "Experience" [ref=e394] [cursor=pointer]:
+            - /url: "#experience"
+        - listitem [ref=e395]:
+          - link "Portfolio" [ref=e396] [cursor=pointer]:
+            - /url: "#portfolio"
+        - listitem [ref=e397]:
+          - link "Blog" [ref=e398] [cursor=pointer]:
+            - /url: https://smarthome.davidcjw.com
+        - listitem [ref=e399]:
+          - link "Contact" [ref=e400] [cursor=pointer]:
+            - /url: "#contact"
+    - generic [ref=e3]:
+      - img
+      - generic [ref=e4]:
+        - generic [ref=e5]:
+          - paragraph [ref=e6]: davidcjw.com
+          - generic [ref=e7]:
+            - paragraph [ref=e8]: "LOCATION: SINGAPORE"
+            - paragraph [ref=e9]: "STACK: GOLANG · K8S · REACT"
+        - generic [ref=e10]:
+          - heading "DAVID CHONG" [level=1] [ref=e12]:
+            - text: DAVID
+            - text: CHONG
+          - generic [ref=e16]:
+            - img [ref=e18]
+            - generic [ref=e29]:
+              - paragraph [ref=e30]: "[ Software Engineer ]"
+              - paragraph [ref=e31]: SG · 2026
+        - generic [ref=e33]:
+          - paragraph [ref=e34]: "[ Portfolio 2026 ]"
+          - paragraph [ref=e35]: Cloud · AI · Full Stack
+      - generic:
+        - generic: Scroll
+    - generic [ref=e38]:
+      - generic [ref=e40]:
+        - paragraph [ref=e41]: Career
+        - heading "Work Experience" [level=2] [ref=e42]
+        - paragraph [ref=e43]: From finance to AI to cloud infrastructure — a non-linear journey through tech.
+      - generic [ref=e48]:
+        - generic [ref=e52]:
+          - generic [ref=e53]:
+            - generic [ref=e54]:
+              - heading "Senior Software Engineer" [level=3] [ref=e55]
+              - paragraph [ref=e56]: Shopee
+            - generic [ref=e57]: Feb 2024 – Present
+          - list [ref=e58]:
+            - listitem [ref=e59]:
+              - generic [ref=e60]: ›
+              - generic [ref=e61]: Part of the Cloud Native Colocation team co-locating latency-sensitive workloads using a Kubelet-like agent deployed across 21,000 nodes in 22 Kubernetes clusters
+            - listitem [ref=e62]:
+              - generic [ref=e63]: ›
+              - generic [ref=e64]: Creator and maintainer of Global Scheduler — a resource-aware scheduling orchestrator that raised cluster utilisation from ~25% to ~50%
+            - listitem [ref=e65]:
+              - generic [ref=e66]: ›
+              - generic [ref=e67]: Team's presentation at KubeCon 2024
+          - generic [ref=e68]:
+            - generic [ref=e69]: Kubernetes
+            - generic [ref=e70]: Golang
+            - generic [ref=e71]: Linux
+            - generic [ref=e72]: React.js
+        - generic [ref=e76]:
+          - generic [ref=e77]:
+            - generic [ref=e78]:
+              - heading "Senior MLOps Engineer" [level=3] [ref=e79]
+              - paragraph [ref=e80]: GoTo Financial (Gojek)
+            - generic [ref=e81]: Oct 2021 – Feb 2024
+          - list [ref=e82]:
+            - listitem [ref=e83]:
+              - generic [ref=e84]: ›
+              - generic [ref=e85]: Maintained Data Science analytics infrastructure — JupyterHub, Airflow, Dask & MLFlow on GKE
+            - listitem [ref=e86]:
+              - generic [ref=e87]: ›
+              - generic [ref=e88]: Upgraded infrastructure from single VMs to JupyterHub on GKE with Dask, cutting training cost by ~60%
+            - listitem [ref=e89]:
+              - generic [ref=e90]: ›
+              - generic [ref=e91]: Principal contributor and maintainer of the internal Data Science Python library used across the team
+            - listitem [ref=e92]:
+              - generic [ref=e93]: ›
+              - generic [ref=e94]: Automated batch and real-time model deployments via Gitlab CI/CD
+          - generic [ref=e95]:
+            - generic [ref=e96]: GKE
+            - generic [ref=e97]: Python
+            - generic [ref=e98]: Airflow
+            - generic [ref=e99]: MLFlow
+            - generic [ref=e100]: Gitlab
+            - generic [ref=e101]: Dask
+        - generic [ref=e105]:
+          - generic [ref=e106]:
+            - generic [ref=e107]:
+              - heading "AI Engineer" [level=3] [ref=e108]
+              - paragraph [ref=e109]: AI Singapore
+            - generic [ref=e110]: Nov 2020 – Oct 2021
+          - list [ref=e111]:
+            - listitem [ref=e112]:
+              - generic [ref=e113]: ›
+              - generic [ref=e114]: Led a team of 3 engineers building a multi-modal content-classification model for a regional AI startup
+            - listitem [ref=e115]:
+              - generic [ref=e116]: ›
+              - generic [ref=e117]: "Models: DistilUSE v2 (text), ResNet50 (image), Jodel (emoji) — combined via early/late fusion"
+          - generic [ref=e118]:
+            - generic [ref=e119]: Docker
+            - generic [ref=e120]: Kubernetes
+            - generic [ref=e121]: Python
+            - generic [ref=e122]: FastAPI
+            - generic [ref=e123]: W&B
+            - generic [ref=e124]: DVC
+        - generic [ref=e128]:
+          - generic [ref=e129]:
+            - generic [ref=e130]:
+              - heading "Full Stack AI Engineer (Pro Bono)" [level=3] [ref=e131]
+              - paragraph [ref=e132]: Idea Ink Pte Ltd
+            - generic [ref=e133]: Sep 2020 – Apr 2022
+          - list [ref=e134]:
+            - listitem [ref=e135]:
+              - generic [ref=e136]: ›
+              - generic [ref=e137]: Ideated and built a PDF-to-infographic service served via a web application
+          - generic [ref=e138]:
+            - generic [ref=e139]: Python
+            - generic [ref=e140]: TypeScript
+            - generic [ref=e141]: Vue 3
+            - generic [ref=e142]: AWS
+            - generic [ref=e143]: FastAPI
+            - generic [ref=e144]: PostgreSQL
+        - generic [ref=e148]:
+          - generic [ref=e149]:
+            - generic [ref=e150]:
+              - heading "AI Associate Engineer" [level=3] [ref=e151]
+              - paragraph [ref=e152]: AI Singapore
+            - generic [ref=e153]: Feb 2020 – Nov 2020
+          - list [ref=e154]:
+            - listitem [ref=e155]:
+              - generic [ref=e156]: ›
+              - generic [ref=e157]: Built an end-to-end Recommender System for a local university library — from scoping to deployment
+          - generic [ref=e158]:
+            - generic [ref=e159]: Docker
+            - generic [ref=e160]: FastAPI
+            - generic [ref=e161]: MLFlow
+            - generic [ref=e162]: Python
+            - generic [ref=e163]: Gitlab
+        - generic [ref=e167]:
+          - generic [ref=e168]:
+            - generic [ref=e169]:
+              - heading "Data Analyst" [level=3] [ref=e170]
+              - paragraph [ref=e171]: Nomura Singapore Limited
+            - generic [ref=e172]: Aug 2017 – Jan 2020
+          - list [ref=e173]:
+            - listitem [ref=e174]:
+              - generic [ref=e175]: ›
+              - generic [ref=e176]: Led process automation and data analytics initiatives using Python and SQL
+            - listitem [ref=e177]:
+              - generic [ref=e178]: ›
+              - generic [ref=e179]: Built Power BI and Tableau dashboards to aggregate risk data for data-driven decision-making
+          - generic [ref=e180]:
+            - generic [ref=e181]: Python
+            - generic [ref=e182]: SQL
+            - generic [ref=e183]: Power BI
+            - generic [ref=e184]: Tableau
+    - generic [ref=e186]:
+      - generic [ref=e187]:
+        - paragraph [ref=e188]: Projects
+        - heading "Portfolio" [level=2] [ref=e189]
+        - paragraph [ref=e190]: A selection of things I've built — from web apps to open-source tools.
+      - generic [ref=e191]:
+        - button "All" [ref=e192]
+        - button "Apps" [ref=e193]
+        - button "Open Source" [active] [ref=e194]
+      - generic [ref=e437]:
+        - generic [ref=e438] [cursor=pointer]:
+          - generic [ref=e440]:
+            - heading "agents-md-generator" [level=3] [ref=e441]
+            - generic [ref=e442]:
+              - link [ref=e443]:
+                - /url: https://agents-md-generator.vercel.app
+                - img [ref=e444]
+              - link [ref=e448]:
+                - /url: https://github.com/davidcjw/agents-md-generator
+                - img [ref=e449]
+          - paragraph [ref=e451]: Generate an AGENTS.md for any public GitHub repo using Claude AI — gives AI coding agents instant project context.
+          - generic [ref=e452]:
+            - generic [ref=e453]: Next.js
+            - generic [ref=e454]: TypeScript
+            - generic [ref=e455]: Claude AI
+        - generic [ref=e456] [cursor=pointer]:
+          - generic [ref=e458]:
+            - heading "install-prompt" [level=3] [ref=e459]
+            - generic [ref=e460]:
+              - link [ref=e461]:
+                - /url: https://install-prompt.vercel.app
+                - img [ref=e462]
+              - link [ref=e466]:
+                - /url: https://github.com/davidcjw/install-prompt
+                - img [ref=e467]
+          - paragraph [ref=e469]: Turn any public GitHub repo into an AI-ready installation prompt. Works with Claude, ChatGPT, Gemini, and more.
+          - generic [ref=e470]:
+            - generic [ref=e471]: Next.js
+            - generic [ref=e472]: TypeScript
+        - generic [ref=e473] [cursor=pointer]:
+          - generic [ref=e475]:
+            - heading "miles-wallet" [level=3] [ref=e476]
+            - generic [ref=e477]:
+              - link [ref=e478]:
+                - /url: https://miles-wallet.vercel.app
+                - img [ref=e479]
+              - link [ref=e483]:
+                - /url: https://github.com/davidcjw/miles-wallet
+                - img [ref=e484]
+          - paragraph [ref=e486]: Track bank points and loyalty miles in one place — localStorage-based, zero backend.
+          - generic [ref=e487]:
+            - generic [ref=e488]: React
+            - generic [ref=e489]: TypeScript
+        - generic [ref=e490] [cursor=pointer]:
+          - generic [ref=e492]:
+            - heading "photomind-mcp" [level=3] [ref=e493]
+            - link [ref=e495]:
+              - /url: https://github.com/davidcjw/photomind-mcp
+              - img [ref=e496]
+          - paragraph [ref=e498]: Local-first MCP server for intelligent macOS Photos.app management — semantic search via CLIP, duplicate detection, and quality scoring.
+          - generic [ref=e499]:
+            - generic [ref=e500]: Python
+            - generic [ref=e501]: MCP
+            - generic [ref=e502]: CLIP
+        - generic [ref=e503] [cursor=pointer]:
+          - generic [ref=e505]:
+            - heading "godaddy-mcp" [level=3] [ref=e506]
+            - link [ref=e508]:
+              - /url: https://github.com/davidcjw/godaddy-mcp
+              - img [ref=e509]
+          - paragraph [ref=e511]: GoDaddy DNS MCP server — manage DNS records via natural language through AI assistants.
+          - generic [ref=e512]:
+            - generic [ref=e513]: Python
+            - generic [ref=e514]: MCP
+        - generic [ref=e515] [cursor=pointer]:
+          - generic [ref=e517]:
+            - heading "mcp-eval" [level=3] [ref=e518]
+            - link [ref=e520]:
+              - /url: https://github.com/davidcjw/mcp-eval
+              - img [ref=e521]
+          - paragraph [ref=e523]: CI-embeddable eval harness for MCP-native agentic workflows — tool-call graph correctness and regression tracking.
+          - generic [ref=e524]:
+            - generic [ref=e525]: Python
+            - generic [ref=e526]: MCP
+        - generic [ref=e527] [cursor=pointer]:
+          - generic [ref=e529]:
+            - heading "sir-reminds-a-lot-v2" [level=3] [ref=e530]
+            - link [ref=e532]:
+              - /url: https://github.com/davidcjw/sir-reminds-a-lot-v2
+              - img [ref=e533]
+          - paragraph [ref=e535]: Portable Telegram bot for credit card spend tracking and due-date reminders. SQLite-backed, Docker-deployable, zero external services.
+          - generic [ref=e536]:
+            - generic [ref=e537]: Python
+            - generic [ref=e538]: Telegram
+            - generic [ref=e539]: Docker
+            - generic [ref=e540]: SQLite
+    - generic [ref=e370]:
+      - generic [ref=e371]:
+        - heading "Get in touch" [level=2] [ref=e372]
+        - paragraph [ref=e373]: Open to interesting conversations, collaborations, and opportunities.
+      - generic [ref=e374]:
+        - link "LinkedIn" [ref=e375] [cursor=pointer]:
+          - /url: https://www.linkedin.com/in/davidcjw
+          - img [ref=e376]
+        - link "GitHub" [ref=e378] [cursor=pointer]:
+          - /url: https://github.com/davidcjw
+          - img [ref=e379]
+        - link "Medium" [ref=e381] [cursor=pointer]:
+          - /url: https://medium.com/@davidcjw
+          - img [ref=e382]
+        - link "Email" [ref=e384] [cursor=pointer]:
+          - /url: mailto:davidcjw@gmail.com
+          - img [ref=e385]
+      - paragraph [ref=e388]: © 2026 David Chong
+  - button "Open Next.js Dev Tools" [ref=e432] [cursor=pointer]:
+    - img [ref=e433]
+  - alert [ref=e436]

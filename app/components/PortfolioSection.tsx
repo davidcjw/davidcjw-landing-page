@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import PortfolioCard from "./PortfolioCard";
 import { projects } from "../data";
@@ -37,6 +38,12 @@ export default function PortfolioSection() {
           <p className="text-gray-400 mt-3 text-base max-w-md mx-auto">
             A selection of things I&apos;ve built — from web apps to open-source tools.
           </p>
+          <Link
+            href="/portfolio"
+            className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-indigo-400 hover:text-indigo-300 transition-colors"
+          >
+            View everything I&apos;m building <span aria-hidden>→</span>
+          </Link>
         </motion.div>
 
         {/* Filter tabs */}

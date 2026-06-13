@@ -19,9 +19,15 @@ npm run build     # production build
 npm run lint      # eslint
 ```
 
+## Routes
+
+- `/` — single-page home (hero, experience, portfolio teaser, contact)
+- `/portfolio` — dedicated "building in public" portfolio page: stats, filterable
+  project grid, and build principles. Sourced from the same `projects` array.
+
 ## Content
 
-All content lives in [`app/data.ts`](app/data.ts) — edit the `experiences` and `projects` arrays to update the page.
+All content lives in [`app/data.ts`](app/data.ts) — edit the `experiences` and `projects` arrays to update the page. The `/portfolio` page and the home portfolio section both read from `projects`, so one edit updates both.
 
 ## Structure
 
@@ -36,9 +42,14 @@ app/
     HalideTopoHero.tsx
     ExperienceSection.tsx
     ExperienceCard.tsx
-    PortfolioSection.tsx
-    PortfolioCard.tsx
+    PortfolioSection.tsx      home portfolio teaser
+    PortfolioCard.tsx         shared project card
+    PortfolioPageHero.tsx     /portfolio header + stats
+    PortfolioExplorer.tsx     /portfolio filterable grid
+    BuildPrinciples.tsx       /portfolio "how I build" strip
     Footer.tsx
+  portfolio/
+    page.tsx          /portfolio route
   data.ts             experiences + projects content
 blocks/               reusable animation primitives
 ```

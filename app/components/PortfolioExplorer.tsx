@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import PortfolioCard from "./PortfolioCard";
-import { projects } from "../data";
+import type { Project } from "../data";
 
 const FILTERS = [
   { label: "All", value: "all" },
@@ -13,7 +13,11 @@ const FILTERS = [
 
 type Filter = (typeof FILTERS)[number]["value"];
 
-export default function PortfolioExplorer() {
+export default function PortfolioExplorer({
+  projects,
+}: {
+  projects: Project[];
+}) {
   const [active, setActive] = useState<Filter>("all");
 
   const visible = projects.filter((p) => !p.hidden);

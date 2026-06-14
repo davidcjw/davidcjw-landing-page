@@ -3,6 +3,7 @@ import Link from "next/link";
 import PortfolioPageHero from "../components/PortfolioPageHero";
 import PortfolioExplorer from "../components/PortfolioExplorer";
 import BuildPrinciples from "../components/BuildPrinciples";
+import { getProjects } from "../projects";
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -17,11 +18,13 @@ export const metadata: Metadata = {
   },
 };
 
-export default function PortfolioPage() {
+export default async function PortfolioPage() {
+  const projects = await getProjects();
+
   return (
     <main className="bg-gray-900 min-h-screen">
-      <PortfolioPageHero />
-      <PortfolioExplorer />
+      <PortfolioPageHero projects={projects} />
+      <PortfolioExplorer projects={projects} />
       <BuildPrinciples />
 
       <footer className="px-6 py-16 text-center">

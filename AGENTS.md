@@ -9,7 +9,8 @@ This version has breaking changes — APIs, conventions, and file structure may 
 - **Next.js 16** + **React 19** — both are recent, check docs before assuming APIs
 - **Tailwind CSS v4** — config-less; uses `@tailwindcss/postcss`, no `tailwind.config.js`
 - **Framer Motion v12** — primary animation library; `useSpring`, `useTransform`, `motion.*`
-- All page content (experience, projects) lives in `app/data.ts` — edit there, not in components
+- Experience and the manually-curated projects live in `app/data.ts` (`manualProjects`) — edit there, not in components
+- Projects are a **hybrid**: `app/projects.ts#getProjects()` (server-only, ISR) merges `manualProjects` with GitHub repos tagged the `showcase` topic, then passes the result as a prop into the client portfolio components. Tag a repo `showcase` on GitHub to auto-list it; use the `overrides` map in `app/projects.ts` to customize name/url/tech/category or hide it
 - See `CODEBASE.md` for a full repo map with file:line pointers before exploring
 
 ## Easter egg: KBD Dragon

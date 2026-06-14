@@ -77,7 +77,11 @@ export type Project = {
   hidden?: boolean;
 };
 
-export const projects: Project[] = [
+// Manually-curated projects — the source of truth for everything GitHub's API
+// can't know about (private repos, custom domains, `github: null`). GitHub repos
+// tagged with the `showcase` topic are merged in at build/ISR time by
+// `app/projects.ts#getProjects`. Manual entries win on name/URL collisions.
+export const manualProjects: Project[] = [
   {
     name: "P1 Registration Planner",
     description: "A Google-maps inspired free tool for Singapore parents navigating Primary 1 school registration.",

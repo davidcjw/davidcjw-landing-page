@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { projects } from "../data";
+import type { Project } from "../data";
 
 function Stat({ value, label }: { value: string | number; label: string }) {
   return (
@@ -17,7 +17,11 @@ function Stat({ value, label }: { value: string | number; label: string }) {
   );
 }
 
-export default function PortfolioPageHero() {
+export default function PortfolioPageHero({
+  projects,
+}: {
+  projects: Project[];
+}) {
   const visible = projects.filter((p) => !p.hidden);
   const total = visible.length;
   const live = visible.filter((p) => p.url).length;

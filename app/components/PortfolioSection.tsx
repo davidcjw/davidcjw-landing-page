@@ -3,12 +3,12 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import PortfolioCard from "./PortfolioCard";
-import { projects } from "../data";
+import type { Project } from "../data";
 
 // Home page shows a teaser; the full set lives on /portfolio.
 const TEASER_COUNT = 4;
 
-export default function PortfolioSection() {
+export default function PortfolioSection({ projects }: { projects: Project[] }) {
   const visible = projects.filter((p) => !p.hidden);
   const featured = visible.slice(0, TEASER_COUNT);
 

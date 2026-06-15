@@ -99,6 +99,22 @@ export const manualProjects: Project[] = [
     category: "app",
   },
   {
+    name: "HDB Floor Planner",
+    description: "AI-powered 2D floor-plan editor — upload a floor plan and Claude vision traces the walls, rooms, doors and windows into editable vectors, then drag to-scale furniture over it.",
+    tech: ["Next.js", "TypeScript", "Konva", "Anthropic SDK", "Supabase"],
+    url: "https://hdb-floor-planner.vercel.app",
+    github: null,
+    category: "app",
+  },
+  {
+    name: "SkillRank",
+    description: "A daily leaderboard of the most popular Claude Code & AI-agent skills, scored from GitHub, npm and community signals and re-ranked every 24 hours.",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Vitest"],
+    url: "https://skill-rank-ten.vercel.app",
+    github: "https://github.com/davidcjw/skill-rank",
+    category: "app",
+  },
+  {
     name: "SG Retirement Planner",
     description: "Singapore's most comprehensive retirement planner, including CPF",
     tech: ["Next.js", "TypeScript"],

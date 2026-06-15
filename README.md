@@ -1,6 +1,14 @@
 # davidcjw.com — Personal Landing Page
 
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=next.js)
+![Live](https://img.shields.io/badge/demo-live-brightgreen)
+
 Portfolio site for David Chong, a software engineer based in Singapore. Deployed at [davidcjw.com](https://davidcjw.com).
+
+<p align="center">
+  <img src="docs/screenshot.png" alt="davidcjw.com personal landing page" width="720">
+</p>
 
 ## Stack
 
@@ -66,3 +74,23 @@ blocks/               reusable animation primitives
 ```
 
 See [`CODEBASE.md`](CODEBASE.md) for a full map of the repo.
+
+## Contributing
+
+This is a personal site, but fixes and suggestions are welcome — open an issue to discuss, or:
+
+1. Fork the repo
+2. Create a feature branch (`git checkout -b feature/your-feature`)
+3. Commit your changes (`git commit -m 'feat: describe change'`)
+4. Push and open a pull request
+
+Please make sure `npm run lint` and `npm run build` pass before submitting a PR.
+
+## Code of Conduct
+
+This project follows the [Contributor Covenant v2.1](https://www.contributor-covenant.org/version/2/1/code_of_conduct/).
+By participating you agree to uphold a welcoming, harassment-free environment.
+
+## License
+
+Distributed under the MIT License. See [LICENSE](LICENSE) for details.

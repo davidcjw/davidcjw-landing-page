@@ -370,14 +370,6 @@ export const manualProjects: Project[] = [
     category: "app",
   },
   {
-    name: "Life Journal",
-    description: "A living digital photo book you fill by texting a Telegram bot — flip through pages of memories and export to PDF.",
-    tech: ["Next.js", "TypeScript", "Supabase", "Telegram"],
-    url: "https://life-journal-mocha-xi.vercel.app",
-    github: "https://github.com/davidcjw/life-journal",
-    category: "app",
-  },
-  {
     name: "Proof of Work",
     description: "An interactive atlas of everything I've shipped — dozens of projects rendered on a zoomable canvas, scraped straight from my repos.",
     tech: ["React", "TypeScript", "Framer Motion", "Vite"],
